@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === 'production'
-const isGithubPages = process.env.GITHUB_PAGES === 'true'
+const isProduction = process.env.NODE_ENV === 'production'
+const isStatic = process.env.BUILD_STATIC === 'true'
 
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: isProd && isGithubPages ? '/Marketize.in' : '',
-  assetPrefix: isProd && isGithubPages ? '/Marketize.in/' : '',
+  basePath: isProduction ? '/Marketize.in' : '',
+  assetPrefix: isProduction ? '/Marketize.in/' : '',
   eslint: {
     ignoreDuringBuilds: true,
   },
