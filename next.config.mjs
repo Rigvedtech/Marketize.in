@@ -1,12 +1,9 @@
 /** @type {import('next').NextConfig} */
-const isProduction = process.env.NODE_ENV === 'production'
-const isStatic = process.env.BUILD_STATIC === 'true'
-
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: isProduction ? '/Marketize.in' : '',
-  assetPrefix: isProduction ? '/Marketize.in/' : '',
+  basePath: '/Marketize.in',
+  assetPrefix: '/Marketize.in/',
   eslint: {
     ignoreDuringBuilds: true,
   },
